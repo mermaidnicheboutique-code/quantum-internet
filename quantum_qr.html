@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quantum WiFi - Scan QR Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        h1 { margin-bottom: 20px; }
+        .qr-code {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        .url {
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Scan to Access Quantum Internet</h1>
+
+        <div class="qr-code">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=http://192.168.40.165:8765" alt="QR Code">
+        </div>
+
+        <div class="url">
+            http://192.168.40.165:8765
+        </div>
+
+        <p style="margin-top: 20px;">
+            <strong>Step 1:</strong> Run the firewall fix:<br>
+            <code>./allow_quantum_wifi.sh</code>
+        </p>
+
+        <p style="margin-top: 10px;">
+            <strong>Step 2:</strong> Scan QR code with your phone
+        </p>
+    </div>
+</body>
+</html>
