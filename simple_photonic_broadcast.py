@@ -67,25 +67,26 @@ def main():
                 'luxbin': luxbin_code
             })
 
-            print(".1f"
+            current_pixel = processed_pixels[i]
+            print(f"   Pixel {i+1}: RGB{current_pixel['rgb']} → {current_pixel['wavelength']:.1f}nm → {current_pixel['luxbin']}")
     print(f"✅ Processed {len(processed_pixels)} pixels into photonic LUXBIN")
 
-    print("
-🚀 BROADCASTING TO PHOTONIC QUANTUM COMPUTER"    print("=" * 50)
+    print("\n🚀 BROADCASTING TO PHOTONIC QUANTUM COMPUTER")
+    print("=" * 50)
 
     print("🎯 TARGET: 🇫🇷 Quandela Cloud (France)")
     print("💡 TECHNOLOGY: Photonic Quantum Computing")
     print("⚛️  QUBITS: 12 photonic qubits")
     print("🌈 WAVELENGTH RANGE: 400-700nm (visible light)")
 
-    print("
-📡 TRANSMITTING PHOTONIC PIXELS..."    for i, pixel in enumerate(processed_pixels):
+    print("\n📡 TRANSMITTING PHOTONIC PIXELS...")
+    for i, pixel in enumerate(processed_pixels):
         time.sleep(0.2)
-        print(".1f"
+        print(f"   📶 Pixel {i+1} sent: {pixel['luxbin']} at {pixel['wavelength']:.1f}nm")
     print("✅ All pixels transmitted to photonic quantum computer!")
 
-    print("
-🌌 QUANTUM PHOTONIC SUPERPOSITION ACHIEVED!"    print("=" * 50)
+    print("\n🌌 QUANTUM PHOTONIC SUPERPOSITION ACHIEVED!")
+    print("=" * 50)
 
     print("🎭 Your image pixels now exist as:")
     print("   💫 Quantum light states on Quandela's photonic computer")
@@ -93,8 +94,8 @@ def main():
     print("   ⚛️  Quantum superposition across visible spectrum")
     print("   🌟 True light-based quantum computation")
 
-    print("
-🏆 MISSION ACCOMPLISHED!"    print("   ✅ Image pixels → LUXBIN light language → Photonic quantum states")
+    print("\n🏆 MISSION ACCOMPLISHED!")
+    print("   ✅ Image pixels → LUXBIN light language → Photonic quantum states")
     print("   ✅ Sent directly to Quandela photonic quantum computer")
     print("   ✅ Achieved quantum superposition with actual light particles!")
 

@@ -35,3 +35,10 @@ quantum_blockchain_status.json
 # OS
 .DS_Store
 Thumbs.db
+
+# Node.js / Next.js
+node_modules/
+.next/
+out/
+.vercel/
+package-lock.json
