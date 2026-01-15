@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { MultiAgentChat } from '../components/MultiAgentChat'
 
 export default function Home() {
   return (
@@ -74,6 +75,10 @@ export default function Home() {
         <section className="ai-agents">
           <h2>AI Agents Securing the Network</h2>
           <p className="section-subtitle">4 AI agents deployed to 4 countries simultaneously</p>
+          <div className="chat-cta">
+            <span className="chat-pulse"></span>
+            Chat with our AI agents - Click the avatars in the bottom right corner!
+          </div>
           <div className="agent-grid">
             <div className="agent-card">
               <div className="agent-flag">USA</div>
@@ -445,7 +450,40 @@ export default function Home() {
 
         .section-subtitle {
           color: #a0a0c0;
+          margin-bottom: 20px;
+        }
+
+        .chat-cta {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          background: linear-gradient(90deg, rgba(0, 245, 160, 0.2), rgba(0, 217, 245, 0.2));
+          border: 1px solid rgba(0, 245, 160, 0.4);
+          padding: 12px 24px;
+          border-radius: 30px;
           margin-bottom: 30px;
+          color: #00f5a0;
+          font-weight: 500;
+          animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .chat-pulse {
+          width: 12px;
+          height: 12px;
+          background: #00f5a0;
+          border-radius: 50%;
+          animation: pulse-ring 1.5s infinite;
+        }
+
+        @keyframes pulse-ring {
+          0% { box-shadow: 0 0 0 0 rgba(0, 245, 160, 0.7); }
+          70% { box-shadow: 0 0 0 10px rgba(0, 245, 160, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(0, 245, 160, 0); }
+        }
+
+        @keyframes glow {
+          from { box-shadow: 0 0 10px rgba(0, 245, 160, 0.3); }
+          to { box-shadow: 0 0 20px rgba(0, 245, 160, 0.5); }
         }
 
         .agent-grid {
@@ -584,6 +622,9 @@ export default function Home() {
           }
         }
       `}</style>
+
+      {/* Interactive AI Agents Chat */}
+      <MultiAgentChat />
     </>
   )
 }
